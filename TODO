@@ -1,0 +1,34 @@
+Current:
+    speed up the robot
+
+
+    sometimes the path is planned completely of the field to nothing
+    hacks and tunes.
+     Tune RRT: obstacles treshold and search dimensions. Save a map once and inspect how to filter obstacles
+     If we are close to a marker, beep
+
+    registration is too slow. threads needed
+    markers are still noisy
+    dijsktra if have time
+
+
+Possible improvements:
+    Camera stuff in marker estimation
+    PID regulation of anglular velocity
+    Dijsktra. A*
+    Variance saving in mapping
+    Anomaly detection in mapping. With ICP/SLAM.
+    RANSAC in checkpoint estimation
+    change goals generation in path_contr so that rot are also goals
+
+
+The Pipeline:
+    Marker 3d estimation - camera geometry or heuristics (see forum post)
+    Checkpoint 3d estimation - fitting the plane (with SVD or RANSAC)
+    Creating the bird view
+    Environment mapping with odometry or ICP
+    Global path planning with tree search or RRT
+    Local path planning with PID or heuristics
+
+As an alternative, if we don't fix movement, global planning can be redone each time we get to the current goal.
+

@@ -1,0 +1,41 @@
+Fun
+	show differential image
+	launch face recognition, if it can see any (they may be to high)
+	run tracker, maybe denis' one
+	робот двигается к цели в кажущейся случайной манере, виляет, или двигается зигзагом
+
+Maybe to PID and dijskstra instead
+
+Deep magic
+    Maybe discard map once a while
+    Or keep variances. If they don't give it, apprixmate by distance at the moment of shooting
+
+    Intead of odometry
+        using ICP is almost hopeless. We need 0.25 sec to extract points.
+            Trimmed ICP may work
+            crazy hack with hand cropping
+            Rotation averaging?
+            loop closing?
+        using markers as anchors?
+        fusion?
+            http://cw.fel.cvut.cz/wiki/_media/courses/a3m33iro/iro_data_fusion_intro.pdf
+
+    sparsify the map somehow (on your phone should be a paper about it).
+        maybe ransac them all with planes and remember planes?
+
+    use threads? in general, what about structure?
+
+Not fun
+    dont reset odometry. when you do it there is a (100%) chance it will be reseted after next sample will be taken
+    markers sometimes occur with id 0, should be filtered out
+    the coordinate system isn't perfectly upright. also, kinect isn't perfectly upright
+    одометрия работает из калибрации двигателей.
+
+current motion execution precision is up to 10 degrees per meter, but usually is mild, more like 2.5 degrees.
+robot moves 0.13-0.15 rad / 21 - 25 cm per cycle at 0.5 velocities. First step is a bit (~5%) smaller.
+robot moves approximately on frequency 2 hertz. normal deviation is 0.5 degree per meter and 1 cm per 90 degrees.
+    First step deviation is bigger
+topics are updated with roughly the same frequency 10 fps
+
+can I install packages on turtles?
+can they add obstacles during the course of testing?
