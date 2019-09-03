@@ -24,4 +24,4 @@ We tried a bunch of other stuff, including using ICP for registartion, etc. The 
 
 ## Results
 
-We got all parts of the pipeline working, and the robot correctly navigated to the target in some 50% of cases. However, I ended up not passing the course as I couldn't care enough to show up at the exam, having to deal with my Bachelor's Thesis, Czech State Exam for Bachelor's degree and summer internship arrangement. In conclusion, was definitely worth it.
+We got all parts of the pipeline working, and the robot correctly navigated to the target in some 50% of cases. In conclusion, the course was definitely worth it and I learned a lot from it!
